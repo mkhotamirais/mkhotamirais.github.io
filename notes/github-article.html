@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>githubku</title>
+</head>
+
+<body>
+    <a href="./../index.html">HOME</a>
+    <div class="container" id="git">
+        <h3 class="title">Github</h3>
+        <div class="content">
+            <ul>
+                <li>Git (local) Github (cloud). First open <a href="https://github.com/">github</a> sigin/sign up ->
+                    repository -> fill a new repository -> check readme -> new file [create your content] -> commit ->
+                    input message</li>
+                <li>If you want to look the changes visually, go to insights -> network</li>
+                <li>alias graph="git log --all --decorate --oneline --graph".</li>
+                <li><b>Send your local repo to github</b>: create your local repo with the files -> open github.com ->
+                    create new repo -> uncheck readme -> copy (git remote add origin
+                    http://github.com/account-name/repo-name.git) -> open git bash -> change directory to your repo ->
+                    paste (git remote ...) -> git remote -> git remote -v -> git push -u origin master -> tehn git push
+                </li>
+                <li><b>Request your github repo to local</b> create your repo on github and some files -> code -> clone
+                    -> copy (http...) -> create your local repo -> open terminal/git bash and change directory to your
+                    repo -> git clone [paste (http...)] -> git remote (default origin) -> git remote -v (there are two
+                    origins: fetch and upush) -> git status -> change the files -> git push</li>
+                <li>if the username and email are requested then: git --list -> git --global (or --local) user.name
+                    [yourname]; git --global user.email [youremail] -> git push</li>
+                <li><b>Fetch / Merge conflict between git local and git cloud</b> if conflict, git push will not work
+                    then</li>
+                <li>git fetch (check repo in github) -> git status (check repo in git local) -> graph (there is a
+                    branch) -> git pull (resolve the conflict then delete the comment tag) -> git status -> git add . ->
+                    git commit -m "message" -> git push</li>
+                <li><b>Github hosting</b>: Github hosting On local: Create source code for your website in your repo
+                    local git On github/cloud: Create new repository "yourrepo.github.io" -> copy [git remote add origin
+                    https:...] Open terminal/gitbash -> chage directory to your repo -> paste [git remote add origin
+                    https:...] git push -u origin master The name of this repo with sufix ".github.io" can only be one,
+                    but if you want another webpage there is a way below: Create another webpage Create new repo
+                    "yourrepo" -> go to setting -> page -> branch main -> then open the url</li>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

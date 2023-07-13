@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascriptku</title>
+</head>
+
+<body>
+    <a href="./../index.html">HOME</a>
+    <h3>prolog and history</h3>
+    <ul>
+        <li><b>prolog</b>: basic concept of programming: variable, data type, loop, condition, array, object, function
+        </li>
+        <li>computer language (cpu: central processing unit) is machine language (low level language / assembly)
+            human wont understand, so programming language bridges human language (high level language) and
+            machine language</li>
+        <li>program is a set of instruction for computer. The computer isn't smart but obedient and tireless, follows
+            eather the correct instruction or incorrect, so the instruction must be correct</li>
+        <li>compiler vs interpreter: compiler (invisible source code, faster, ready to run) but (not cross
+            platform, not flexible and need more steps)</li>
+        <li>compiler vs interpreter: interperter (cross platform, flexible, easy to test) but (need interpreter,
+            slower, hard to access source code)</li>
+        <li><b>compiler</b> : c, c++, objective-c; <b>interpreter</b> javascript, php; <b>hybrid</b> java,
+            vb.net, python</li>
+        <li>why learn javascript: <b>first</b> free, don't need instalation only need browser; <b>second</b>
+            untyped (don't need to define data tipe for each variable) <b>third</b> interpreted</li>
+        <li>Javascript can be as a <b>client-side (frontend)</b> web development: native javascript / vanilla
+            javascript; jquery; angularjs, react, ember etc. or <b>Server-side (backend)</b> development:
+            nodejs, expressjs</li>
+        <li>Another function: Browser extension/Add-on; Desktop applications; Mobile app development; IoT &
+            robotics; JSON</li>
+        <li><b>history</b> later</li>
+    </ul>
+
+    <h3>basic</h3>
+    <ul>
+        <li>var, let, const, var shorthand; console (.log, .info, .error, .warn .table);</li>
+        <li>ternary: [x == 1 ? 'yes' : 'no']; nullish_coalescing [let x = null ?? 'not null'];</li>
+        <li>optionalChaining (let objek = {"a" = 1}) [objek?.a] "is a on 'objek' not null?";</li>
+        <li>operator: arithmetic (-+*/**%); assignment (+=s.d%=); comparison (>s.d!==); logical: :&&||!;
+            conditional(if, while, switch case; type: typeof);</li>
+        <li>data type: number (int, float), string, boolean, undefined, null, symbol, object (array, function,
+            date);</li>
+        <li><b>falsy</b> false, 0, -0, '', "", ``, null, undefined, NaN; <b>truthy:</b> selain falsy; test with
+            ternary: x?'true':'false';</li>
+        <li>operator logika di non boolean: OR membaca nilai truthy pertama dari kanan; AND membaca nilai falsy
+            pertama dari kanan</li>
+        <li><b>number</b> : base 10 (0); binary (0b0000); hexadecimal (0x00); octal (0o00);
+            BigInt("123456789012345678901234567890");</li>
+        <li>pareseInt(1.5 | 1.5string | string); parseFloat(); Number(); try each of them; isNaN(1); isNaN('1');
+        </li>
+        <li>let a = 1; a.toString(); .toExponential(2); .toFixed(2); .toPrecision(2); .valueOf();</li>
+        <li>Number.EPSILON; .MAX_VALUE; .MIN_VALUE; MAX_SAFE_INTEGER; MIN_SAFE_INTEGER; POSITIVE_INFINITY;
+            NEGATIVE_INFINITY;</li>
+        <li>Math.E; .PI; .SQRT2, .SQRT1_2, .round(2.4|2.5|2.6), .ceil(2.6|2.4|-2.6|-2.4),
+            .floor(2.6|2.4|-2.6|-2.4), .trunc(4.5|-4.5), .sign(4.5|-4.5|0), .pow(4,3), .sqrt(16), .abs(-4),
+            .sin(90 * Math.PI/180), .cos(90 * Math.PI/180), .min(1,2,3), .max(1,2,3)</li>
+        <li>Math.random(); .floor(Math.random) * 11 random between 0-10</li>
+        <li><b>string</b> // comment 1 line /* comment > 1 line */</li>
+        <li>string template/literal template with backtic ``: for quote inside string; multiline string;
+            interpolation; variable substitution ${vs}; html template / fragments</li>
+        <li>secape character \ ' " \ b f n r t v 0 unicode u00a9 u00ae u00b1 u00b5 u2012, only works on
+            textarea or console</li>
+        <li>let halo = 'Halo, saya Ahmad. Saya pelajar';</li>
+        <li>halo.length; halo[0] = halo.charAt(0); halo.split(' ');</li>
+        <li>halo.slice(1) = halo.slice(halo.length-1); halo.slice(0,4)</li>
+        <li>halo.substring(1) is similar to slice() but number less then 0 are treated as 0</li>
+        <li>halo.substr(0,4) is similar to slice() but the second parametes specifies the length of the
+            extracted part</li>
+        <li>halo.replace('Ahmad', 'Abdul'); for not case sensitive with /i (/ahmad/i, 'Abdul'); for </li>
+        <li>halo.replace(/ahmad/g 'abdul') replace all 'ahmad' to 'abdul'</li>
+        <li>halo.replaceAll('ahmad', 'abdul') only case sensitive, </li>
+        <li>halo.toUpperCase(); .toLowerCase; halo.concat('salam kenal', ' ', 'lainnya')</li>
+        <li>let trm = ' trim '; trm.trimStart(); .trimEnd</li>
+        <li>halo.search('saya'); .indexOf('saya', 10); .lastIndexOf('saya'); .match('aya'); /i /g /gi</li>
+        <li><b>array</b> : arr = []; arr[0] = 'nol'; arr[1] = 'satu'; arr[2] = 'dua';</li>
+        <li>let arr2 = ['nol', 'satu', 'dua']; let arrAngka = [1,10,20,2];</li>
+        <li>arr; arr[0]; arr[1]; arr.length = arr["length"]; arr[arr.length-1]</li>
+        <li>ubah nilai: arr[0] = 'zero'; ubah 'nol' jadi 'zero'; arr[4] = 'empat' array yang dilompat bernilai
+            'undefined'</li>
+        <li>membuktikan array: Array.isArray(arr) = arr instanceOf Array;</li>
+        <li>edit array1: arr.push('x'); .pop(); .shift(); .unshift('x'); .concat(arr2); .splice(1,1);
+            .splice(1,0,'x')</li>
+        <li>edit array2: arr.slice(1); .slice(1,2); .sort(); .sort((a,b) => a-b); .reverse(); .sort((a,b) =>
+            b-a);</li>
+        <li>arr.sort() => 0.5 - Math.random(); for random order</li>
+        <li>Math.max.apply(null, [1,2,3]) = Math.max(1,2,3) = 3; Math.min.apply(null, [1,2,3]) = Math.min(1,2,3)
+            = 1</li>
+        <li>arr.toString(); .join('-'); .filter(x => x <= 10); arr.map(x=> x*2);</li>
+        <li><b>loop</b> : for: for (let i = 0; i < arr.length; i++){console.log(i, arr[i])}</li>
+        <li>while (let i < 5){console.log(i); i++; }</li>
+        <li>do {console.log(i); i++} while (i < 5);</li>
+        <li>while(true){console.log(i); i++; if(i>5){break;}}</li>
+        <li>for(let i = 0; i < 5; i++){if(i%2==0){continue;}console.log(i)}</li>
+        <li>foreach: arr.forEach((value, index, array)=>{console.log(value, index, array)});</li>
+        <li>for in object: for(let key in object){console.log(key, object[key])}</li>
+        <li>for in array: for(let v in array){console.log(v, array[v])}</li>
+        <li>for of array: for(let v of array){console.log(v)};</li>
+        <li>for of string: for(let w of word){console.log(w)};</li>
+        <li><b>if conditional</b> if else if: let x = 1; if (x==1){'betul'}else{'salah'}</li>
+        <li>switch(x){case 1: case 2: case 3: console.log('sedikit'); break; case 4: console.log('cukup');
+            break; default: console.log('banyak');}</li>
+    </ul>
+
+    <h3>function basic</h3>
+    <ul>
+        <li>Two types: built-in adn user-defined</li>
+        <li>f declaration: function fname (param = 'default'){ return `hello ${param}`;} console.log(fname('arg'))</li>
+        <li>f expression basic: let fname = function(){return "hello"} console.log(fname())</li>
+        <li>f expression arrow: let fname = () => "hello"; (no parameter); let fname = name => `hello ${name}`; (one
+            parameter); console.log(fname('ahmad')); let fname = (name, age) => {return "hello $name, $aga"};
+            console.log(fname('ahmad', 20)); (more than one parameter); Arrow function don't have <b>this</b> concept
+        </li>
+        <li>arguments: function plus(){ let result = 0; for (let i = 0; i < arguments.length; i++){result
+                +=arguments[i]; } return result; }; console.log(plus(1,2,3));</li>
+        <li>refactoring: making function more effective if there are variables that are not needed then delete it</li>
+        <li>scope: variable outside function can be accessed inside function but variable inside function cannot be
+            accessed outside function. it's because javascript is block function</li>
+        <li>recursive: function factorial(n){ if(n === 0){return 1} else {return n * factorial(n-1)}};
+            console.log(factorail(3));; this is recursive: function inside another function, example for factorial:
+        </li>
+        <li>rest parameter: function sum(...val) { let res = 0; for (v of val) res += v; return res; }
+            console.log(sum(1, 2, 3))</li>
+        <li>without self-invoking: let result = (name) => `i'm ${name}`; console.log(result('ahmad'))</li>
+        <li>with self-invoking: console.log(((name) => `i'm ${name}`)('ahmad'));</li>
+    </ul>
+
+    <h3>function advance</h3>
+    <ul>
+        <li>function fname(name, act){act(name)}; fname('ahmad', console.log) / fname('abdul', alert);</li>
+        <li>fname = <b>higher order function</b> as it have 'function as it's argument' called <b>callback</b></li>
+        <li>examples: setTimeOut(function(){}, num); x.addEventListener('click', function(){}); filter; map; reduce;
+            <b>method chaining</b>
+        </li>
+        <li>function outer(name){let nama = name; function inner(age){return `${nama} and ${age}`} return inner;};
+            console.log(outer('ahmad')(20)); or console.dir(outer()); then open the function in console ->
+            <b>scopes</b> -> <b>closure</b>
+        </li>
+        <li>the simpler form by mixing: self-invoking, anonimous, and arrow function</li>
+        <li>console.log(((name)=>(age)=>`${name} and ${age}`)('ahmad')(20));</li>
+        <li>var and let: console.log(i); var i = 'ahmad'; it will be 'undefined'; it's because 'hoisting'; 'i' is lifted
+            to the top as 'undefined'</li>
+        <li><b>hoisting</b> creation phase: javascript checks if there is var and if there is var but hasn't value
+            then the var will be defined as 'undefined'; and if there is function, the function will be defined as
+            'it's self function code'. then window = global object; this = window; afterwards execution phase</li>
+        <li><b>destructuring</b>; <b>array</b> let no = ['satu', 'dua', 'tiga']; let [a,b,c] = no; console.log(a,b,c);
+            <b>skip items</b> let [a, , c] = no; console.log(a,c); <b>swap items</b> let a = 'satu', b = 'dua'; [a,b] =
+            [b,a]; console.log(a,b); <b>function</b>: <b>return value</b> function coba() {return [1,2]}; let [a,b] =
+            coba(); console.log(a,b); <b>rest parameter</b> let [...r] = coba(); console.log(r);
+        </li>
+        <li><b>destructuring object</b> let person = {nama: 'ahmad', umur: 20}; const {nama, umur} = person;
+            console.log(nama, umur); <b>self invoking</b> ({nama, umur} = {nama: 'ahmad', umur: 20}); console.log(nama);
+            <b>alias</b> let {nama: n = 'ahmad', umur: u, asal: a = 'jakarta'} = coba; console.log(n,a); <b>rest</b>
+            let {nama, ...r} = coba; console.log(r);
+        </li>
+    </ul>
+
+    <h3>js object</h3>
+    <ul>
+        <li>All Javascript value except primitives are objects. A primitive value has no properties or methods. A
+            primitive data type is data that has a primitive value. the 7 primitive data types are: string, number,
+            boolean, null, undefined, symbol, bigint; variables that contain many values are objects</li>
+        <li>Object to array: let obj = {nama: 'ahmad', umur: 20}; let arr = Object.values(obj); console.log(arr)</li>
+        <li>Object to string/JSON; let obj = {nama: 'ahmad', umur: 20}; let str = JSON.stringify(obj);</li>
+        <li>property is variable inside object; method is function inside object</li>
+        <li>ways to create object: object literal (basic); function declaration (object literal inside function);
+            constructor function (using keyword this)</li>
+        <li>object literalA: let o = {}; o.name = 'john'; o.call = function(name){return `hello ${name} i'm
+            ${this.name}`}; console.log(o.call('siti'));</li>
+        <li>object literalB: let o = {name: 'john', call: function(name){return `hello ${name} i'm ${this.name}`}};
+            console.log(o.call('siti'));</li>
+        <li>function declaration: function person(name){let o = {}; o.name=name; o.call = function(name){return `hello
+            ${name} i'm ${this.name}`} return o}; let ahmad = person('ahmad'); console.log(ahmad.call('siti'));</li>
+    </ul>
+
+    <h3>js class</h3>
+    <ul>
+        <li>Pengantar: function f(n) { this.n = n; this.call = function (n) { return `Hello ${n} i'm ${this.n}`; } } let
+            john = new f('john'); console.log(john.call('siti'))</li>
+        <li><b>Object.create()</b> let a = {} a.n = 'john'; let b = Object.create(a); console.log(b.n);</li>
+        <li>let a = {} a.call = function (n) { return `Hello ${n} i'm ${this.n}`; } function person(n) { let b =
+            Object.create(a); b.n = n; return b; } let john = person('john'); console.log(john.call('siti'))</li>
+        <li>Prototype this: function Person(n) { /*let this = Object.create(person.prototype)*/ this.n = n; /*return
+            this*/ } Person.prototype.call = function (n) { return `Hello ${n} i'm ${this.n}`; } let John = new
+            Person('john'); console.log(John.call('siti'))</li>
+        <li><b>Class</b>: class A { constructor(n) { this.n = n; } call(n) { return `Hello ${n} i'm ${this.n}`; } } let
+            john = new A('john'); console.log(john.call('siti'))</li>
+    </ul>
+
+    <h3>js DOM & js BOM</h3>
+    <ul>
+        <li>method; document; elements; html; forms; css</li>
+        <li>animations; events; event listener; navigation; nodes; collections; node lists</li>
+        <li>window; screen; location; history; navigator; popup alert; timing; cookies</li>
+    </ul>
+
+    <h3>js jquery</h3>
+    <ul>
+        <li>selector; event mouse/keyboar/form/document/window;</li>
+        <li>effects: hide/show; fade; slide; animate; stop; callback; chaining</li>
+        <li>html: get; set; add; remove; css; dimension</li>
+        <li>traversing; ancestors; descendants; siblings; filtering</li>
+        <li>ajax: load; get/post</li>
+    </ul>
+</body>
+
+</html>

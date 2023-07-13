@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gitku</title>
+</head>
+
+<body>
+    <a href="./../index.html">HOME</a>
+    <div class="container" id="git">
+        <h3 class="title">Git</h3>
+        <div class="content">
+            <ul>
+                <li>Git is one of version control system (VCS) software, the others are Subversion, mercurial, CVS</li>
+                <li>Git originate source code flexibly it's can do revision, calaboration and sharing by recorded
+                    snapshot then you can go back to the previous changes</li>
+                <li><a href="https://git-scm.com/" target="_blank">download git</a> then "git bash" terminal will be
+                    installed automatically</li>
+                <li>Gitbash command: git -v/version, pwd, clear, cd, ls, q</li>
+                <li>open git bash or command prompt create new folder in any path then, change directory to the folder.
+                    (these are the commands: git init, git add [newfile], git status, git commit -m "comment", git
+                    config, git branch, git help, git log -n; git checkout [5 five digit hash] [file-name]); You should
+                    know the three area/state: working tree, staging area and history</li>
+                <li>First: git init (change your folder/directory to a repo/repository, then a folder '.git' will be
+                    added to your repo, uncheck "view -> hidden items" to see the ".git". it will record every changes
+                    in staging area and history) git status -> git add . (move all inside your repo from working tree to
+                    staging area) -> git init -m "message" (move from staging area to history) -> git status;</li>
+                <li>if you add new files you must do: git add . -> git init -m "message"</li>
+                <li>if you change your files you can only do: git commit -am "message"</li>
+                <li>if username adn email are requested then do: "git config --list"/"git --list --show-origin" -> git
+                    config --global user.name "your-username" -> git config --global user.email "youremail@gmail.com"
+                </li>
+                <li>git log (see all chages); git log -3 (see the last 3 chages); git log index.txt (see chages in
+                    index.txt)</li>
+                <li>git log --oneline --graph; git show hash; git checkout hash</li>
+                <li>git clean -f (delete newfile); git resotre [filename] undo changes or deletions in working tree</li>
+                <li><b>Git branching</b>: when you init your folder, the file become branch master/main</li>
+                <li>git branch; git branch newbranch; git log; git log --all --decorate --oneline --graph; you can
+                    shorten the long git log command to the shorter one by alias</li>
+                <li>alias graph="git log --all --decorate --oneline --graph".</li>
+                <li>git checkout newbranch (moving head(pointer) to newbranch); git branch</li>
+                <li>All you do in the newbrach will not affect to master branch unless both them are merged</li>
+                <li><b>Git merge</b> if you want to merge newbranch with master branch then the pointer must point to
+                    master branch</li>
+                <li>after merging, you can delete the branch that no longer used</li>
+                <li>the conflict occurs if the same files in both branches being edited at the same place</li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

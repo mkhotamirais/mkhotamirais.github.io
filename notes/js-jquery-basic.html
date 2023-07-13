@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqueryku</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+</head>
+
+<body>
+    <a href="./../index.html">MENU</a>
+
+    <h3>Jquery: $(selector).action()</h3>
+    <button id="action">Run Action</button>
+    <button id="stop">Stop Action</button>
+    <ul>
+        <li>Selector: $('#id'), $('.class'), $('tag')</li>
+        <li>.action(speed, callback): .show(); .hide(); .toggle(); fadeIn(); fadeOut(); fadeToggle(); fadeTo();
+            slideDown(); slideUp; slideToggle()</li>
+        <ul>
+            <li>speed: 1000 for 1 second, "slow", "speed";</li>
+            <li>fadeTo(speed, opacity, callback)</li>
+            <li>animate({param}, speed, callback); example param: color: red;</li>
+            <li>param: {cssProperty: "value"} / {cssProperty: "action"}</li>
+            <li>example param: {opacity: 0} / {opacity: 'toggle'}</li>
+        </ul>
+        <li>With On action: .on('action', callback)</li>
+        <li>Without On action: .action(callback)</li>
+        <li>On chaining: .on({action1: callback}, {action2: callback2}, {actionKeN: callbackKeN})</li>
+        <li>.stop()</li>
+        <li>example callback: function(){console.log('success')}</li>
+        <li>Chaining: $(action).hide().show().css('color', 'red')</li>
+    </ul>
+    <h3>Jquery $(selector).get()/.get(set/callback)/.add('text')/.remove()/.class(class1 class2)/.css("property",
+        "value")/.dimention()</h3>
+    <ul>
+        <li>.get(): .html(), .text(), val(input form). attr('attribute')</li>
+        <li>set: .html('new innerHtml'), .text('new innerText'), .val('new value'), attr('attribute', 'new-value');
+            callback: function(i, origText){return origText}
+        </li>
+        <li>.add('text'): .append(), .prepend(), .after(), .before()</li>
+        <li>.remove(): .remove(), .empty(); .remove(specific-selector)</li>
+        <li>.class(): addClass(), removeClass(), toggleClass()</li>
+        <li>.css("property", "value")</li>
+        <li>.css({"property1":"value1", "property2":"value2"})</li>
+        <li>.dimention: width(), height(), innerWidth(), innerHeight(), outerWidth(), outerHeight()</li>
+    </ul>
+    <h3>Jquery $(selector).traversing()</h3>
+    <ul>
+        <li>.traversing(): .ancestors(), .decendants(), .siblings(), .filtering()</li>
+        <li>.ancestors(): .parent(), .parents(selector), .parentsUntil(selector)</li>
+        <li>.descendants(): .children(), .children(selector), .find(selector)</li>
+        <li>.siblings(): .siblings(), .siblings(selector), .next(), .nextAll(), .nextUntil(selector), .prev(),
+            .prevAll(), .prevUntil(selector)</li>
+    </ul>
+
+
+    <script>
+        $(document).ready(function () {
+
+        })
+    </script>
+
+</body>
+
+</html>
