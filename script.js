@@ -1,10 +1,10 @@
 $(document).ready(function () {
   $("#bars").on("click", function () {
-    $(this).toggleClass("fa-times");
+    $("#bars i").toggleClass("fa-times");
     $("#e-links").addClass("-translate-x-full");
     $("#layer2").addClass("-z-30 opacity-0").removeClass("z-30 opacity-20");
     $("header nav").toggleClass("max-h-screen");
-    if ($(this).hasClass("fa-times")) {
+    if ($("#bars i").hasClass("fa-times")) {
       $("#layer").addClass("z-30 opacity-20").removeClass("-z-30 opacity-0");
     } else {
       $("#layer").addClass("-z-30 opacity-0").removeClass("z-30 opacity-20");
