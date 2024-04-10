@@ -18,14 +18,21 @@ darkBtn.addEventListener("click", function () {
 });
 
 const iframe = document.querySelector("iframe");
-const visitProject = document.querySelector(".visit-project");
+const visitProject = document.querySelector(".visit-project a");
 const visitProjectTitle = document.querySelector(".visit-project span");
+
 const publicApis = document.querySelector(".public-apis");
 const panduanReactjs = document.querySelector(".panduan-reactjs");
 const mkhotamiRingkasan = document.querySelector(".mkhotami-ringkasan");
+const mkhotamiEduwork = document.querySelector(".mkhotami-eduwork");
+const hadinalmusri = document.querySelector(".hadinalmusri");
+
 const publicApisUrl = "https://panduan-public-apis.vercel.app/";
 const panduanReactjsUrl = "https://panduan-reactjs.vercel.app/";
 const mkhotamiRingkasanUrl = "https://mkhotami-ringkasan.vercel.app/";
+const mkhotamiEduworkUrl = "https://mkhotami-eduwork.vercel.app/";
+const hadinalmusriUrl = "https://hadinalmusri.com";
+
 visitProject.setAttribute("href", publicApisUrl);
 
 publicApis.addEventListener("click", function () {
@@ -42,4 +49,14 @@ mkhotamiRingkasan.addEventListener("click", function () {
   iframe.setAttribute("src", mkhotamiRingkasanUrl);
   visitProjectTitle.textContent = "Mkhotami Ringkasan";
   visitProject.setAttribute("href", mkhotamiRingkasanUrl);
+});
+mkhotamiEduwork.addEventListener("click", function () {
+  iframe.setAttribute("src", mkhotamiEduworkUrl);
+  visitProjectTitle.textContent = "Mkhotami Eduwork";
+  visitProject.setAttribute("href", mkhotamiEduworkUrl);
+});
+hadinalmusri.addEventListener("click", function () {
+  iframe.setAttribute("src", hadinalmusriUrl);
+  visitProjectTitle.textContent = "Hadinalmusri";
+  visitProject.setAttribute("href", hadinalmusriUrl);
 });
