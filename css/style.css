@@ -58,7 +58,7 @@ header .logo {
 }
 
 header .logo .logo-name {
-  color: indigo;
+  color: violet;
   font-size: 1.3rem;
   line-height: 0;
   font-weight: 600;
@@ -148,7 +148,10 @@ main .visit-project span {
   font-size: 1.3rem;
   text-transform: capitalize;
   font-weight: 500;
-  color: indigo;
+  color: violet;
+}
+main .visit-project sup {
+  font-size: 0.6rem;
 }
 
 footer {
@@ -166,7 +169,7 @@ footer .footer-box {
 }
 
 footer .footer-box .copyright {
-  color: #36363c;
+  color: #4f4f5c;
   font-size: 0.8rem;
 }
 
