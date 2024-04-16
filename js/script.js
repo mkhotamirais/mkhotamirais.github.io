@@ -35,7 +35,7 @@ const mkhotamiRingkasanUrl = "https://mkhotami-ringkasan.vercel.app/";
 const mkhotamiEduworkUrl = "https://mkhotami-eduwork.vercel.app/";
 const hadinalmusriUrl = "https://hadinalmusri.com";
 
-visitProject.setAttribute("href", publicApisUrl);
+visitProject.setAttribute("href", mkhotamiPortofolioUrl);
 
 mkhotamiPortofolio.addEventListener("click", function () {
   iframe.setAttribute("src", mkhotamiPortofolioUrl);
