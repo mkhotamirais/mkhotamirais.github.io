@@ -194,7 +194,7 @@ main .skills .badges {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.1rem;
+  gap: 0.3rem;
   padding: 0 4rem;
 }
 
@@ -211,7 +211,7 @@ footer {
   padding: 1rem;
 }
 
-footer .footer-box {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -219,43 +219,43 @@ footer .footer-box {
   gap: 0.5rem;
 }
 
-footer .footer-box .copyright {
+footer .copyright {
   color: #888888;
   font-size: 0.8rem;
 }
 
-footer .footer-box .copyright a {
+footer .copyright a {
   font-weight: 600;
   color: black;
 }
 
-.dark footer .footer-box .copyright a {
+.dark footer .copyright a {
   font-weight: 600;
   color: white;
 }
 
-footer .footer-box .copyright a:hover {
+footer .copyright a:hover {
   text-decoration: underline;
 }
 
-footer .footer-box .footer-icon-profil {
+footer .footer-icon-profil {
   display: flex;
   gap: 1rem;
   margin-bottom: 0.3rem;
 }
 
-footer .footer-box .footer-icon-profil a {
+footer .footer-icon-profil a {
   width: 1rem;
   height: 1rem;
   display: inline-block;
   transition: transform 0.2s;
 }
 
-footer .footer-box .footer-icon-profil a:hover {
+footer .footer-icon-profil a:hover {
   transform: scale(1.2);
 }
 
-.dark footer .footer-box .footer-icon-profil a {
+.dark footer .footer-icon-profil a {
   fill: white;
 }
 
@@ -268,16 +268,20 @@ footer .footer-box .footer-icon-profil a:hover {
     flex-direction: column;
   }
 
-  footer .footer-box {
+  main .skills .badges {
+    padding: 0 1rem;
+  }
+
+  footer {
     flex-direction: column;
     justify-content: center;
   }
 
-  footer .footer-box .footer-icon-profil {
+  footer .footer-icon-profil {
     order: 1;
   }
 
-  footer .footer-box .copyright {
+  footer .copyright {
     order: 2;
   }
 }
