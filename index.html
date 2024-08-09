@@ -1,112 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mkhotami github homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mkhotami github homepage</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
-
-<body>
-  <header>
-    <div class="logo">
-      <div class="logo-name">Mkhotami</div>
-      <div class="logo-brand">Github homepage</div>
-    </div>
-    <div class="nav-right">
-      <div>
-        <button type="button" title="dark-mode" id="dark">
-          <i class="fa-regular fa-sun"></i>
-        </button>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-name">Mkhotami</div>
+        <div class="logo-brand">Github homepage</div>
       </div>
-      <div>
-        <a title="source code" href="https://github.com/mkhotamirais/mkhotamirais.github.io" target="_blank"
-          rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="hay">
-      <center>
-        <div class="hello">Hello, My name Is</div>
-        <div>Mkhotami Rais</div>
-        <div>I am a web developer</div>
-      </center>
-    </div>
-    <div class="project">
-      <center>
-        <div>Choose Project</div>
-        <div class="btn-projects">
-          <button type="button" class="portofolio">portofolio</button>
-          <button type="button" class="homepage">homepage</button>
-          <button type="button" class="warung-ota">warung ota</button>
-          <button type="button" class="hadinalmusri">hadinalmusri</button>
+      <div class="nav-right">
+        <div>
+          <button type="button" title="dark-mode" id="dark">
+            <i class="fa-regular fa-sun"></i>
+          </button>
         </div>
-      </center>
-    </div>
-    <div class="visit-project">
-      <a href="https://mkhotami-portofolio.vercel.app/" target="_blank" rel="noopener noreferrer"
-        title="visit project title">
-        <center>
-          <span>mkhotami portofolio</span>
-          <sup>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </sup>
-        </center>
-      </a>
-    </div>
-    <iframe title="panduan public apis" src="https://mkhotami-portofolio.vercel.app/" frameborder="0" width="100%"
-      height="500"></iframe>
-  </main>
-  <footer>
-    <div class="footer-box">
-      <div class="copyright"></div>
-      <script>
-        document.querySelector(
-          ".copyright"
-        ).innerHTML = `Copyright &copy; ${new Date().getFullYear()} <a href="https://mkhotamirais.github.io" target="_blank" rel="noopener noreferrer">mkhotami</a>`;
-      </script>
-      <div class="footer-icon-profil">
-        <a title="icon linkedin" target="_blank" rel="noopener noreferrer" href="https://github.com/mkhotamirais"
-          class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
-            <path fill="#fff" d="M41,24c0,9.4-7.6,17-17,17S7,33.4,7,24S14.6,7,24,7S41,14.6,41,24z"></path>
-            <path fill="#455a64"
-              d="M21 41v-5.5c0-.3.2-.5.5-.5s.5.2.5.5V41h2v-6.5c0-.3.2-.5.5-.5s.5.2.5.5V41h2v-5.5c0-.3.2-.5.5-.5s.5.2.5.5V41h1.8c.2-.3.2-.6.2-1.1V36c0-2.2-1.9-5.2-4.3-5.2h-2.5c-2.3 0-4.3 3.1-4.3 5.2v3.9c0 .4.1.8.2 1.1L21 41 21 41zM40.1 26.4C40.1 26.4 40.1 26.4 40.1 26.4c0 0-1.3-.4-2.4-.4 0 0-.1 0-.1 0-1.1 0-2.9.3-2.9.3-.1 0-.1 0-.1-.1 0-.1 0-.1.1-.1.1 0 2-.3 3.1-.3 1.1 0 2.4.4 2.5.4.1 0 .1.1.1.2C40.2 26.3 40.2 26.4 40.1 26.4zM39.8 27.2C39.8 27.2 39.8 27.2 39.8 27.2c0 0-1.4-.4-2.6-.4-.9 0-3 .2-3.1.2-.1 0-.1 0-.1-.1 0-.1 0-.1.1-.1.1 0 2.2-.2 3.1-.2 1.3 0 2.6.4 2.6.4.1 0 .1.1.1.2C39.9 27.1 39.9 27.2 39.8 27.2zM7.8 26.4c-.1 0-.1 0-.1-.1 0-.1 0-.1.1-.2.8-.2 2.4-.5 3.3-.5.8 0 3.5.2 3.6.2.1 0 .1.1.1.1 0 .1-.1.1-.1.1 0 0-2.7-.2-3.5-.2C10.1 26 8.6 26.2 7.8 26.4 7.8 26.4 7.8 26.4 7.8 26.4zM8.2 27.9c0 0-.1 0-.1-.1 0-.1 0-.1 0-.2.1 0 1.4-.8 2.9-1 1.3-.2 4 .1 4.2.1.1 0 .1.1.1.1 0 .1-.1.1-.1.1 0 0 0 0 0 0 0 0-2.8-.3-4.1-.1C9.6 27.1 8.2 27.9 8.2 27.9 8.2 27.9 8.2 27.9 8.2 27.9z">
-            </path>
-            <path fill="#455a64"
-              d="M14.2,23.5c0-4.4,4.6-8.5,10.3-8.5c5.7,0,10.3,4,10.3,8.5S31.5,31,24.5,31S14.2,27.9,14.2,23.5z"></path>
-            <path fill="#455a64"
-              d="M28.6 16.3c0 0 1.7-2.3 4.8-2.3 1.2 1.2.4 4.8 0 5.8L28.6 16.3zM20.4 16.3c0 0-1.7-2.3-4.8-2.3-1.2 1.2-.4 4.8 0 5.8L20.4 16.3zM20.1 35.9c0 0-2.3 0-2.8 0-1.2 0-2.3-.5-2.8-1.5-.6-1.1-1.1-2.3-2.6-3.3-.3-.2-.1-.4.4-.4.5.1 1.4.2 2.1 1.1.7.9 1.5 2 2.8 2 1.3 0 2.7 0 3.5-.9L20.1 35.9z">
-            </path>
-            <path fill="#00bcd4"
-              d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z M24,40c-8.8,0-16-7.2-16-16S15.2,8,24,8 s16,7.2,16,16S32.8,40,24,40z">
-            </path>
-          </svg>
-        </a>
-        <a title="icon github" target="_blank" rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/mkhotami-rais/" class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
-            <path fill="#0288D1"
-              d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
-            </path>
-            <path fill="#FFF"
-              d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
-            </path>
-          </svg>
-        </a>
+        <div>
+          <a
+            title="source code"
+            href="https://github.com/mkhotamirais/mkhotamirais.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </header>
+    <main>
+      <section class="me">
+        <h1>Welcome</h2>
+        <p>
+          I'm <span>Mkhotami</span>, a <span>web developer</span> with expertise in <span>MERN</span> and
+          <span>NextJs</span>. I build dynamic, <span>responsive web applications</span>
+          and create seamless user experiences with efficient code.
+        </p>
+        <a class="cta center" href="https://tamiweb.vercel.app/portfolio">About Me</a>
+      </section>
+      <section class="web">
+        <h1>My Projects</h1>
+        <p>I created two main websites that encompass all my projects.</p>
+        <div class="web-cards">
+          <div class="web-card">
+            <h2>Tamivite</h3>
+            <p>This website is built with React using Vite as the build tool. It showcases various UI projects, public API fetching, and basic CRUD operations.</p>
+            <a href="https://tamivite.vercel.app/" class="cta">visit</a>
+          </div>
+          <div class="web-card">
+            <h2>Tamiweb</h2>
+            <p>This is a full-stack website built with Next.js, featuring authentication, CRUD operations, and API fetching from various platforms and databases.</p>
+            <a href="https://tamiweb.vercel.app/" class="cta">visit</a>
+          </div>
+        </div>
+      </section>
+      <section class="skills">
+        <h1>My Skills</h1>
+        <p>Here is the complete list of tools I use to develop my website projects</p>
+        <div class="badges">
+          <div class="badge">react</div>
+          <div class="badge">nextjs</div>
+          <div class="badge">tailwind</div>
+          <div class="badge">shadcn</div>
+          <div class="badge">framer-motion</div>
+          <div class="badge">svg</div>
+          <div class="badge">html</div>
+          <div class="badge">css</div>
+          <div class="badge">javascript</div>
+          <div class="badge">typescript</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-box">
+        <div class="copyright"></div>
+        <script>
+          document.querySelector(
+            ".copyright"
+          ).innerHTML = `Copyright &copy; ${new Date().getFullYear()} <a href="https://mkhotamirais.github.io" target="_blank" rel="noopener noreferrer">mkhotami</a>`;
+        </script>
+        <div class="footer-icon-profil">
+          <a
+            title="github profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/mkhotamirais"
+            class="icon"
+          >
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a
+            title="linkedin profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/mkhotami-rais/"
+            class="icon"
+          >
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a
+            title="tamivite"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://tamivite.vercel.app/"
+            class="icon"
+          >
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Vite</title><path d="m8.286 10.578.512-8.657a.306.306 0 0 1 .247-.282L17.377.006a.306.306 0 0 1 .353.385l-1.558 5.403a.306.306 0 0 0 .352.385l2.388-.46a.306.306 0 0 1 .332.438l-6.79 13.55-.123.19a.294.294 0 0 1-.252.14c-.177 0-.35-.152-.305-.369l1.095-5.301a.306.306 0 0 0-.388-.355l-1.433.435a.306.306 0 0 1-.389-.354l.69-3.375a.306.306 0 0 0-.37-.36l-2.32.536a.306.306 0 0 1-.374-.316zm14.976-7.926L17.284 3.74l-.544 1.887 2.077-.4a.8.8 0 0 1 .84.369.8.8 0 0 1 .034.783L12.9 19.93l-.013.025-.015.023-.122.19a.801.801 0 0 1-.672.37.826.826 0 0 1-.634-.302.8.8 0 0 1-.16-.67l1.029-4.981-1.12.34a.81.81 0 0 1-.86-.262.802.802 0 0 1-.165-.67l.63-3.08-2.027.468a.808.808 0 0 1-.768-.233.81.81 0 0 1-.217-.6l.389-6.57-7.44-1.33a.612.612 0 0 0-.64.906L11.58 23.691a.612.612 0 0 0 1.066-.004l11.26-20.135a.612.612 0 0 0-.644-.9z"/></svg>
+          </a>
+          <a
+            title="tamivite"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://tamiweb.vercel.app/"
+            class="icon"
+          >
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Next.js</title><path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></svg></a>
+        </div>
+      </div>
+    </footer>
 
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
