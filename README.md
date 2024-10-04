@@ -1,71 +1,50 @@
-dari yt muhammad afifudin
+# React + TypeScript + Vite
 
-vs code auto import suggestion
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-ctrl space
+Currently, two official plugins are available:
 
-syaratnya
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-file yang dituju terbuka, atau jika tertutup ada fail terbuka lain yang mengimport module tersebut jika tidak muncul tekan ctrl space
+## Expanding the ESLint configuration
 
-barrel export
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-urutan import pada es6 gunakan ctrl shift p + organize import / shift alt o
+- Configure the top-level `parserOptions` property like this:
 
-task
-- [x] #739
-
-*/-/+ untuk list hasilnya sama saja
-- satu
-- satu
-* dua
-* dua
-+ tiga
-+ tiga
-
-1. satu
-2. dua
-
-1. nested
-   - nested satu
-   - nested dua
-     + nested lagi
-       * nested lagi
-2. dua
-3. tiga
-
-[kucing](./me2-removebg.png)
-
-[header](https://github.com/mkhotamirais/mkhotamirais/blob/main/RULES.md#heading1)
-[header2](#heading1)
-
-links
-
-**[google](https://google.com)**
-
-supported color models
-
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
-
-quoting code
-
-`quoting code with single backtick 'ctrl e'`
-```
-multiline code
-with triple backtick
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-quoting text
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-> quoting text
-> > nested quoting text
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-styling text
-
-**ctrl b** | __bold__ | *ctrl i* |  _italic_ | ~~strikethrough~~ | **bold _and_ nested italic** | ***all bold italic*** | <sup>superscript</sup> | <sub>subscript</sub>
-
-heading
-
-# heading1
-### heading3
-###### heading6
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
