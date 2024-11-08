@@ -1,17 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-main {
-  flex-grow: 100%;
-  flex-shrink: 100%;
-  border: 1px solid;
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+nav a {
+  text-decoration: none;
+  max-width: fit-content;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }

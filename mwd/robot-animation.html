@@ -3,55 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>robot animation</title>
     <style>
       body {
-        background: lightblue;
+        background: gray;
       }
       .face {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        inset: 0;
         bottom: 150px;
         height: 40px;
         width: 65px;
         background: black;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 20px 20px 10px 10px;
         margin: auto;
       }
       .head {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        inset: 0;
         bottom: 150px;
         height: 75px;
         width: 100px;
         background: white;
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 60px 60px 10px 10px;
         margin: auto;
         z-index: -1;
       }
       .body {
         position: absolute;
-        top: 200px;
-        left: 0;
-        right: 0;
-        bottom: 150px;
+        inset: 0;
+        bottom: -60px;
         height: 120px;
         width: 115px;
         background: white;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
+        border-radius: 20px 20px 100px 100px;
         margin: auto;
       }
       .left {
@@ -63,38 +48,45 @@
         height: 30px;
         width: 100px;
         background: white;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 10px;
+        border-radius: 10px 10px 10px 50px;
         margin: auto;
+        transform: translateY(-40px) rotateZ(45deg);
+        transform: rotateY(0) rotateZ(0);
+        transform: translateY(-40px) rotateZ(45deg);
         animation: hand 1s linear infinite;
       }
       .right {
         position: absolute;
-        top: 75px;
+        inset: 0;
         left: 160px;
-        right: 0px;
-        bottom: 40px;
+        bottom: -40px;
         height: 30px;
         width: 100px;
         background: white;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 50px;
+        border-radius: 10px 50px 10px 10px;
         margin: auto;
         transform: rotateZ(90deg);
       }
 
-      .eye1 {
+      .eye {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        background-color: white;
+        inset: 0;
+        bottom: 150px;
+        width: 20px;
+        height: 18px;
+        border-radius: 100%;
+        margin: auto;
+        z-index: 1;
+      }
+      .eye-1 {
+        left: -25px;
+      }
+      .eye-2 {
+        left: 25px;
       }
 
-      /* @keyframes hand {
+      @keyframes hand {
         0% {
           transform: translateY(-40px) rotateZ(45deg);
         }
@@ -104,7 +96,7 @@
         100% {
           transform: translateY(-40px) rotateZ(45deg);
         }
-      } */
+      }
     </style>
   </head>
   <body>
@@ -113,7 +105,7 @@
     <div class="body"></div>
     <div class="left"></div>
     <div class="right"></div>
-    <div class="eye1"></div>
-    <div class="eye2"></div>
+    <div class="eye eye-1"></div>
+    <div class="eye eye-2"></div>
   </body>
 </html>
