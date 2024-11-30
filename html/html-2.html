@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html 2</title>
+  </head>
+  <body>
+    <h1>html 2 form</h1>
+    <!-- <form action="/this_page.php" target="_self" method="get" autocapitalize="off" enctype="text/plain"></form> -->
+    <form>
+      <!-- default attribute -->
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" placeholder="name" /><br />
+
+      <input type="text" value="ahmad" placeholder="your name" /><br />
+
+      <input type="number" placeholder="number" /><br />
+
+      <input type="email" placeholder="email" /><br />
+
+      <input type="password" name="password" id="password" placeholder="******" /><br />
+
+      <input type="radio" id="html" name="fav_language" value="HTML" /><label for="html">HTML</label>
+      <input type="radio" id="css" name="fav_language" value="CSS" /><label for="css">CSS</label>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript" /><label for="javascript"
+        >JavaScript</label
+      ><br />
+
+      <input type="checkbox" id="react" name="react" value="REACT" /><label for="react">REACT</label>
+      <input type="checkbox" id="vue" name="vue" value="VUE" /><label for="vue">VUE</label>
+      <input type="checkbox" id="angular" name="angular" value="Angular" /><label for="angular">ANGULAR</label><br />
+
+      <label for="siswa">choose siswa</label>
+      <!-- <select title="siswa" name="siswa" id="siswa" size="2" multiple> -->
+      <select title="siswa" name="siswa" id="siswa">
+        <option value="ahmad">ahmad</option>
+        <option value="abdul" selected>abdul</option>
+        <option value="siti">siti</option></select
+      ><br />
+
+      <textarea name="content" id="content" placeholder="content"></textarea>
+
+      <fieldset>
+        <legend>Legend</legend>
+        <input type="text" placeholder="text1" /><br />
+        <input type="text" placeholder="text2" /><br />
+      </fieldset>
+      <br />
+
+      <!-- <input list="browsers" />
+      <datalist id="browsers">
+        <option value="Edge"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist> -->
+
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

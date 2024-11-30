@@ -3,18 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <title>mkhotamirais</title>
   </head>
   <body>
-    <h3>html</h3>
-    <nav class="html"></nav>
-    <h3>css</h3>
-    <nav class="css"></nav>
-    <h3>javascript</h3>
-    <nav class="js"></nav>
+    <!-- html -->
+    <h2>html</h2>
+    <nav x-data>
+      <template x-for="list in $store.lists.html">
+        <a :href="list.href" x-text="list.label"></a>
+      </template>
+    </nav>
+    <!-- css -->
+    <h2>css</h2>
+    <!-- js -->
+    <nav x-data>
+      <template x-for="list in $store.lists.css">
+        <a :href="list.href" x-text="list.label"></a>
+      </template>
+    </nav>
+    <h2>js</h2>
+    <nav x-data>
+      <template x-for="list in $store.lists.js">
+        <a :href="list.href" x-text="list.label"></a>
+      </template>
+    </nav>
 
-    <script src="lists.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

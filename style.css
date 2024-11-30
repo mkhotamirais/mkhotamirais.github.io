@@ -2,19 +2,15 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  /* gap: 4px; */
+  align-items: center;
 }
 
 nav a {
-  text-decoration: none;
-  max-width: fit-content;
+  padding-right: 1rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
+h1,
+h2,
+h3 {
+  text-align: center;
 }

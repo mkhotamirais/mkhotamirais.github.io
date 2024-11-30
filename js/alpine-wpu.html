@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      h1 {
+        font-size: 2rem !important;
+        font-weight: bold !important;
+      }
+      h2 {
+        font-size: 1.5rem !important;
+        font-weight: 600 !important;
+      }
+    </style>
+
+    <title>alpine wpu</title>
+  </head>
+  <body class="p-4">
+    <h1>alpine wpu</h1>
+    <p>gunakan cdn dan install extensi alpine.js intellisense</p>
+
+    <!-- x-data | x-text | x-html -->
+    <div class="border p-2 my-2">
+      <h2>x-data | x-text | x-html</h2>
+      <div x-data x-text="'hello world!'"></div>
+      <div x-data x-html="'<a href=\'https://google.com\' class=\'text-blue-500\'>google</a>'"></div>
+
+      <div x-data="{nama: 'ahmad'}" x-text="nama">Konten diganti</div>
+
+      <div x-data="{nama: 'ahmad', asal: 'jakarta', angka: 20}">
+        <p x-text="nama + ' ' + asal"></p>
+        <div x-data="{asal: 'bandung'}">
+          <p x-text="nama + ' ' + asal"></p>
+        </div>
+        <p>
+          angka <span x-text="angka"></span> adalah bilangan <span x-text="angka % 2 == 0 ? 'genap' : 'ganjil'"></span>
+        </p>
+      </div>
+    </div>
+
+    <!-- x-show | x-if | x-bind / : | x-transition -->
+    <div x-data="{open: false}" class="border p-2 my-2">
+      <h2>x-show | x-if | x-transition | x-bind / :</h2>
+      <button
+        x-data
+        type="button"
+        title="button"
+        @click="alert('hello')"
+        class="p-2 py-1 mr-2 bg-yellow-500 rounded-lg"
+      >
+        alert
+      </button>
+      <button
+        type="button"
+        @click="open = !open"
+        title="button"
+        class="p-2 text-white py-1 rounded-lg"
+        x-bind:class="open ? 'bg-red-500' : 'bg-blue-500'"
+      >
+        <span x-text="open ? 'close' : 'open'"></span>
+      </button>
+      <div class="grid grid-cols-2 gap-2">
+        <p x-show="open" class="bg-green-500 p-3 rounded mt-2">x-show</p>
+        <template x-if="open">
+          <p class="bg-yellow-500 p-3 rounded mt-2">x-if</p>
+        </template>
+        <p x-show="open" x-transition class="bg-green-500 p-3 rounded mt-2">x-show</p>
+        <p x-show="open" x-transition.duration.1000ms class="bg-green-500 p-3 rounded mt-2">x-show</p>
+        <p x-show="open" x-transition.origin.top.left.duration.1000ms class="bg-green-500 p-3 rounded mt-2">x-show</p>
+      </div>
+    </div>
+
+    <!-- x-on:event / @event -->
+    <div x-data="{open: false}" class="border p-2 my-2">
+      <h2>x-on:event / @event | $event</h2>
+      <div class="mb-2">
+        <button @click="alert('hello')" type="button" title="button" class="bg-yellow-500 p-2">@click</button>
+        <button @mouseenter="alert('hello')" type="button" title="button" class="bg-yellow-500 p-2">@mouseenter</button>
+        <button @dblclick="alert('hello')" type="button" title="button" class="bg-yellow-500 p-2">@dblclick</button>
+        <button @click="(e) => e.target.innerHTML = 'World'" type="button" class="bg-blue-500 p-2">Hello</button>
+      </div>
+      <div>
+        <input type="text" class="border" placeholder="keyup" @keyup="(e) => alert(e.target.value)" />
+        <input type="text" class="border" placeholder="keyup.enter" @keyup.enter="alert('keyup.enter')" />
+      </div>
+    </div>
+
+    <!-- x-for with template -->
+    <div class="border p-2 my-2">
+      <h2>x-for with template</h2>
+      <div x-data="{names: ['ahmad', 'abdul', 'siti']}">
+        <ul>
+          <template x-for="name in names">
+            <li x-text="name"></li>
+          </template>
+        </ul>
+      </div>
+    </div>
+
+    <!-- x-for from global state -->
+    <div x-data class="border p-2 my-2">
+      <h2>Global State and Accessing it</h2>
+      <p x-text="$store.pacar"></p>
+      <template x-for="name in $store.gebetan.names">
+        <p x-text="name"></p>
+      </template>
+    </div>
+
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.store("pacar", "neneng");
+        Alpine.store("gebetan", {
+          names: ["iis", "ayu", "rifka"].sort(),
+        });
+      });
+    </script>
+  </body>
+</html>
