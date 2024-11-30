@@ -18,7 +18,7 @@ const css = [
 ].sort((a, b) => a.label.localeCompare(b.label));
 
 const js = [
-  { href: "#", label: "vue js" },
-  { href: "js/alpine-wpu.html", label: "alpine wpu" },
-  { href: "#", label: "three js" },
+  { href: "js/vue-jon.html", label: "vue-jon" },
+  { href: "js/vue-traversy.html", label: "vue-traversy" },
+  { href: "js/alpine-wpu.html", label: "alpine-wpu" },
 ].sort((a, b) => a.label.localeCompare(b.label));

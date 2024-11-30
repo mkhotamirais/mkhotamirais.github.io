@@ -5,6 +5,14 @@ body {
   align-items: center;
 }
 
+nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 nav a {
   padding-right: 1rem;
 }
