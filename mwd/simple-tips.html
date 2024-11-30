@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>simple tips</title>
+    <style>
+      img.box-reflect {
+        -webkit-box-reflect: right 10px;
+        -moz-box-reflect: right 10px;
+      }
+
+      img.clip-path:hover {
+        /* clip-path: circle(50% at 50% 50%) */
+        clip-path: circle();
+      }
+    </style>
   </head>
   <body>
     <h1>simple tips</h1>
     <h3>content editable</h3>
     <p contenteditable="true">You can edit me</p>
+
+    <h3>box reflect</h3>
+    <img class="box-reflect" src="https://vectorwiki.com/images/tmnX3__html.svg" alt="" width="50" />
+
+    <h3>hover clip path</h3>
+    <img
+      class="clip-path"
+      src="https://images.pexels.com/photos/11100116/pexels-photo-11100116.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="girl"
+      width="100"
+    />
   </body>
 </html>
