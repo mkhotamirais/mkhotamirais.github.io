@@ -2,6 +2,7 @@
 const openNavBtn = document.querySelector(".header .navbar .open-nav-btn");
 const openNavIcon = document.querySelector(".header .navbar .open-nav-btn i");
 const navContainer = document.querySelector(".header .navbar .nav-container");
+const nav = document.querySelector(".header .navbar .nav-container nav");
 
 openNavBtn.addEventListener("click", () => {
   openNavBtn.classList.toggle("active");
@@ -16,6 +17,9 @@ navContainer.addEventListener("click", () => {
   openNavBtn.classList.remove("active");
   navContainer.classList.remove("active");
   openNavIcon.classList.replace("fa-xmark", "fa-bars");
+  nav.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 });
 
 const navMenus = [

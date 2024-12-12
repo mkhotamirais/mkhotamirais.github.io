@@ -213,12 +213,13 @@ body {
   }
 
   .header .navbar .nav-container nav {
-    padding: 1rem;
+    padding: 2rem 1rem;
     height: 100%;
     width: 80%;
     background-color: white;
     flex-direction: column;
     transform: translateX(-100%);
+    overflow: auto;
   }
 
   .header .navbar .nav-container.active nav {
@@ -239,7 +240,31 @@ body {
     border-bottom: 1px solid var(--bg-color-1);
   }
 
-  .header .navbar .nav-container nav .nav-menu a:hover {
-    background-color: var(--bg-color-1);
+  .header .navbar .nav-container nav .nav-menu .nav-item {
+    position: relative;
+    border-bottom: 1px solid var(--bg-color-1);
+    overflow: hidden;
+  }
+
+  .header .navbar .nav-container nav .nav-menu .nav-item button {
+    box-sizing: border-box;
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .navbar .nav-container nav .nav-menu .nav-item .sub-menu {
+    position: relative;
+    display: flex;
+    height: 0;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: none;
+    padding: 0 1rem;
+    transform: translateY(0);
+  }
+  .header .navbar .nav-container nav .nav-menu .nav-item:hover .sub-menu {
+    height: calc-size(auto, size);
   }
 }
