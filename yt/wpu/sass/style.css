@@ -1,0 +1,31 @@
+h1 {
+  color: blue;
+}
+
+.sass-1 {
+  color: red;
+}
+.sass-1 h1 {
+  color: blue;
+}
+.sass-1 .child h1 {
+  color: yellow;
+}
+.sass-1 .child p {
+  color: black;
+}
+.child .sass-1 {
+  border: 1px solid;
+}
+.sass-1:hover {
+  background-color: yellow;
+}
+.sass-1-coba1 {
+  color: green;
+}
+.sass-1 .sass-1-coba2 {
+  color: blue;
+}
+.sass-1 .sass-1-coba3 {
+  color: blue;
+}/*# sourceMappingURL=style.css.map */

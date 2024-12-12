@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --header-height: 3.5rem;
+  /* colors */
+  --first-color: hsl(216, 96%, 64%);
+  --white-color: hsl(0, 0%, 100%);
+  --dark-color: hsl(216, 26%, 11%);
+  --dark-color-light: hsl(216, 14%, 24%);
+  --body-color: hsl(216, 96%, 98%);
+  /* typography */
+  --body-font: "Poppins", serif;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --font-medium: 500;
+  --font-semibold: 600;
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media (min-width: 1150%) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark-color);
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.nav__logo {
+  color: var(--white-color);
+}
+
+.nav__toggle,
+.nav__close {
+  display: flex;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .nav__menu {
+    position: fixed;
+    /* top: 0; */
+    top: -120%;
+    left: 0;
+    background-color: var(--dark-color);
+    box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2);
+    width: 100%;
+    padding-block: 4rem;
+    z-index: var(--z-fixed);
+    transition: top 0.4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
+  transition: color 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.nav-menu-show {
+  top: 0;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+.dropdown__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
+}

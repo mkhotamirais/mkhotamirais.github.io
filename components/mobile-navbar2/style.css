@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 4rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+header #open-nav,
+header nav #logo-mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  header #open-nav,
+  header nav #logo-mobile {
+    display: flex;
+  }
+  header nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  header nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header nav .nav-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 70%;
+    transition: all 0.5s ease;
+    right: -100%;
+  }
+
+  header nav.active .nav-content {
+    right: 0;
+  }
+}

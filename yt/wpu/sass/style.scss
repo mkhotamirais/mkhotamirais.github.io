@@ -1,0 +1,38 @@
+h1 {
+    color: blue;
+}
+
+.sass-1 {
+    color: red;
+    h1 {
+        color: blue;
+    }
+    .child h1 {
+        color: yellow;
+    }
+    .child {
+        p {
+            color: black;
+        }
+    }
+    .child & {
+        border: 1px solid;
+    }
+
+    &:hover {
+        background-color: yellow;
+    }
+
+    &-coba1 {
+        color: green;
+    }
+// tanpa interpolasi
+    & &-coba2 {
+        color: blue;
+    }
+// dengan interpolasi
+    #{&}-coba3 {
+            color: blue;
+    }
+
+}

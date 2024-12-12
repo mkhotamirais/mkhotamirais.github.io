@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+      body {
+        padding: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem !important;
+      }
+    </style>
+
+    <title>vue envato (unfinished)</title>
+  </head>
+  <body>
+    <h1>vue envato</h1>
+    <p>v-on:submit.prevent="onSubmit" : name, argument, modifiers, value</p>
+
+    <div id="app">
+      <div v-text="'envato'">halo dunia</div>
+      <div v-text="title"></div>
+      <div v-html="'<p class=\'text-blue-500\'>envato</p>'"></div>
+      <div v-bind:class="myClass">{{ title }}</div>
+    </div>
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            title: "envato",
+            myClass: "text-blue-500",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

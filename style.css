@@ -1,24 +1,245 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #00c2bf;
+  --secondary-color: #009de0;
+  --accent-color: #00e044;
+  --bg-color-2: rgba(0, 0, 0, 0.2);
+  --bg-color-1: rgba(0, 0, 0, 0.1);
+  --text-color: #333333;
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Nunito", sans-serif;
 }
 
-nav {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-nav a {
-  padding-right: 1rem;
+button,
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 6rem;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
 h2,
-h3 {
+h3,
+.logo {
+  font-family: var(--primary-font);
+}
+
+/* body */
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+}
+
+/* header */
+.header {
+  height: 4rem;
+  /* border-bottom: 1px solid var(--bg-color-1); */
+  width: 100%;
+  z-index: 999;
+}
+
+.header .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.header .navbar {
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .navbar .open-nav-btn {
+  padding: 4px;
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.header .navbar .open-nav-btn.active i {
+  transform: rotate(180deg);
+}
+
+.header .navbar .nav-container nav .nav-menu {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item {
+  position: relative;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item button {
+  height: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  text-transform: capitalize;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item button span {
+  margin-right: 0.5rem;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item button i {
+  font-size: 0.7rem;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item button:hover {
+  color: var(--primary-color);
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 100%;
+  width: max-content;
+  box-shadow: 0 0.1rem 0.2rem var(--bg-color-2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  background-color: white;
+  z-index: 99;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item:hover .sub-menu a:hover {
+  color: var(--primary-color);
+}
+
+/* main */
+.main {
+  position: relative;
+  width: 100%;
+  z-index: 99;
+  flex-grow: 1;
+}
+
+.main .main-content {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 100%;
+  gap: 2rem;
+  padding: 3rem 0;
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+
+.main .main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.main .main-footer .fa-github {
+  font-size: 2rem;
+}
+
+/* footer */
+.footer {
+  height: 4rem;
+  width: 100%;
+}
+
+.footer .footer-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .navbar .nav-container .logo-mobile,
+.header .navbar .open-nav-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header .navbar .nav-container .logo-mobile,
+  .header .navbar .open-nav-btn {
+    display: flex;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header .navbar .nav-container {
+    position: fixed;
+    background-color: var(--bg-color-1);
+    -webkit-backdrop-filter: blur(0.2rem);
+    backdrop-filter: blur(0.2rem);
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .header .navbar .nav-container.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header .navbar .nav-container nav {
+    padding: 1rem;
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    flex-direction: column;
+    transform: translateX(-100%);
+  }
+
+  .header .navbar .nav-container.active nav {
+    transform: translateX(0);
+  }
+
+  .header .navbar .nav-container nav .nav-menu {
+    z-index: -99;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .navbar .nav-container nav .nav-menu a {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--bg-color-1);
+  }
+
+  .header .navbar .nav-container nav .nav-menu a:hover {
+    background-color: var(--bg-color-1);
+  }
 }
