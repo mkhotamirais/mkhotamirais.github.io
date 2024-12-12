@@ -55,6 +55,9 @@ body {
   /* border-bottom: 1px solid var(--bg-color-1); */
   width: 100%;
   z-index: 999;
+  background-color: white;
+  position: sticky;
+  top: 0;
 }
 
 .header .logo {
@@ -162,10 +165,16 @@ body {
   align-items: center;
   justify-content: center;
   padding: 4rem 0;
+  gap: 1.5rem;
 }
 
-.main .main-footer .fa-github {
+.main .main-footer a {
+  display: flex;
   font-size: 2rem;
+}
+
+.main .main-footer a img {
+  width: 2.4rem;
 }
 
 /* footer */

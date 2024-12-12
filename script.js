@@ -53,8 +53,9 @@ const navMenus = [
     href: "#",
     label: "yt",
     subMenu: [
-      { href: "yt/yt-1.html", label: "yt-1" },
-      { href: "yt/yt-2.html", label: "yt-2" },
+      { href: "yt/bedimcode", label: "yt-1" },
+      { href: "yt/mwd", label: "yt-2" },
+      { href: "yt/wpu", label: "yt-3" },
     ],
   },
   {
