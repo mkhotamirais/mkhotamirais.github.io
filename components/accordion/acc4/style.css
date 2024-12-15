@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+}
+
+.acc-btn {
+  cursor: pointer;
+  background: white;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.acc-btn::after {
+  content: "+";
+}
+
+.expand::after {
+  content: "-";
+}
+
+.acc-collapse {
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid;
+  transition: 0.2s;
+}
+
+.acc-collapse p {
+  padding: 0.5rem;
+}

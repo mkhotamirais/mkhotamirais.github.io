@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>navbar nested</title>
+  </head>
+  <body>
+    <header>
+      <a href="#">Logo</a>
+      <button type="button" id="open-nav">open nav</button>
+      <nav>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <div class="drop-nav">
+          <button type="button">
+            <span>products</span>
+            <span class="icon">v</span>
+          </button>
+          <div class="drop-content">
+            <a href="#">product 1</a>
+            <a href="#">product 2</a>
+            <a href="#">product 3</a>
+          </div>
+        </div>
+        <a href="#">contact</a>
+        <div class="drop-nav">
+          <button type="button">
+            <span>more info</span>
+            <span class="icon">v</span>
+          </button>
+          <div class="drop-content">
+            <a href="#">info 1</a>
+            <a href="#">info 2</a>
+            <a href="#">info 3</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>

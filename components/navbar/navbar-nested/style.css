@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+header {
+  height: 4rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+header nav a {
+  transition: all 0.5s ease;
+}
+
+header nav > a {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+header nav a:hover {
+  color: red;
+}
+
+header nav .drop-nav {
+  position: relative;
+}
+
+header nav .drop-nav button {
+  height: 4rem;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header nav .drop-nav button .icon {
+  transition: all 0.5s ease;
+  line-height: 0.8;
+}
+
+header nav .drop-nav:hover button .icon {
+  transform: rotate(180deg);
+}
+
+header nav .drop-nav:hover button {
+  color: red;
+}
+
+header nav .drop-nav .drop-content {
+  position: absolute;
+  border: 1px solid;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+}
+
+header nav .drop-nav:hover .drop-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+header nav .drop-nav .drop-content a {
+  display: block;
+  width: max-content;
+  padding: 0.5rem 1rem;
+}
+
+header #open-nav {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  header #open-nav {
+    display: flex;
+  }
+  header nav {
+    position: fixed;
+    background: #aaaaaa;
+    inset: 0;
+    width: 70%;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 2rem;
+  }
+
+  header nav a {
+    text-align: left;
+    height: 2rem;
+  }
+
+  header nav .drop-nav button {
+    height: 2rem;
+  }
+}

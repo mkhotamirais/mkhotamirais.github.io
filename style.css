@@ -15,7 +15,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   transition: all 0.3s ease;
 }
 
@@ -26,7 +26,7 @@ a {
 }
 
 .container {
-  padding: 0 6rem;
+  padding: 0 10rem;
   width: 100%;
   height: 100%;
 }
@@ -94,7 +94,6 @@ body {
 }
 
 .header .navbar .nav-container nav .nav-menu .nav-item button {
-  height: 100%;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -137,8 +136,56 @@ body {
   transform: translateY(0);
 }
 
+.header .navbar .nav-container nav .nav-menu .nav-item:hover > button i {
+  transform: rotate(180deg);
+}
+
 .header .navbar .nav-container nav .nav-menu .nav-item:hover .sub-menu a:hover {
   color: var(--primary-color);
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu .nav-item2 {
+  position: relative;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu .nav-item2 button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  height: auto;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu .nav-item2 .sub-menu2 {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.2rem var(--bg-color-2);
+  background-color: white;
+  left: 100%;
+  min-width: max-content;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(1rem, -1.5rem);
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu .nav-item2 .sub-menu2 a {
+  text-transform: capitalize;
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu .nav-item2:hover > button i {
+  transform: rotate(180deg);
+}
+
+.header .navbar .nav-container nav .nav-menu .nav-item .sub-menu .nav-item2:hover .sub-menu2 {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(1rem, -1rem);
 }
 
 /* main */
@@ -196,7 +243,7 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header .navbar .nav-container .logo-mobile,
   .header .navbar .open-nav-btn {
     display: flex;
@@ -219,6 +266,10 @@ body {
   .header .navbar .nav-container.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  .header .navbar .nav-container nav::-webkit-scrollbar {
+    display: none;
   }
 
   .header .navbar .nav-container nav {

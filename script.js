@@ -22,57 +22,6 @@ navContainer.addEventListener("click", () => {
   });
 });
 
-const navMenus = [
-  {
-    href: "#",
-    label: "html",
-    subMenu: [
-      { href: "html/html-1.html", label: "html-1" },
-      { href: "html/html-2.html", label: "html-2" },
-    ],
-  },
-  {
-    href: "#",
-    label: "css",
-    subMenu: [
-      { href: "css/css-marquee.html", label: "css-marquee" },
-      { href: "css/robot-animation.html", label: "robot-animation" },
-      { href: "css/simple-tips.html", label: "simple-tips" },
-    ],
-  },
-  {
-    href: "#",
-    label: "js",
-    subMenu: [
-      { href: "js/vue-jon.html", label: "vue-jon" },
-      { href: "js/vue-traversy.html", label: "vue-traversy" },
-      { href: "js/alpine-wpu.html", label: "alpine-wpu" },
-    ],
-  },
-  {
-    href: "#",
-    label: "yt",
-    subMenu: [
-      { href: "yt/bedimcode", label: "yt-1" },
-      { href: "yt/mwd", label: "yt-2" },
-      { href: "yt/wpu", label: "yt-3" },
-    ],
-  },
-  {
-    href: "#",
-    label: "components",
-    subMenu: [
-      { href: "components/accordion", label: "accordion" },
-      { href: "components/accordion2", label: "accordion2" },
-      { href: "components/accordion3", label: "accordion3" },
-      { href: "components/mobile-navbar", label: "mobile-navbar" },
-      { href: "components/mobile-navbar2", label: "mobile-navbar2" },
-      { href: "components/mobile-navbar3", label: "mobile-navbar3" },
-      { href: "components/modal", label: "modal" },
-    ],
-  },
-];
-
 const navMenuElement = document.querySelector(".header .navbar .nav-menu");
 
 navMenuElement.innerHTML = `
@@ -86,11 +35,31 @@ ${navMenus
       </button>
       <div class="sub-menu">
         ${navMenu.subMenu
-          .map(
-            (subMenu) => `
-          <a href="${subMenu.href}">${subMenu.label}</a>
-          `
-          )
+          .map((subMenu) => {
+            if (subMenu.subMenu2) {
+              return `
+                <div class="nav-item2">
+                  <button type="button">
+                    <span>${subMenu.label}</span>
+                    <i class="fa fa-chevron-right"></i>
+                  </button>
+                  <div class="sub-menu2">
+                  ${subMenu.subMenu2
+                    .map(
+                      (subMenu2) => `
+                      <a href="${subMenu2.href}">${subMenu2.label}</a>
+                      `
+                    )
+                    .join("")}
+                  </div>
+                </div>
+                `;
+            } else {
+              return `
+                <a href="${subMenu.href}">${subMenu.label}</a>
+                `;
+            }
+          })
           .join("")}
       </div>
     </div>
