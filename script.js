@@ -5,12 +5,15 @@ const navMenus = [
     subMenu: [
       { href: "html/html-1.html", label: "html-1" },
       { href: "html/html-2.html", label: "html-2" },
+      { href: "html/svg.html", label: "svg" },
+      { href: "html/canvas", label: "canvas" },
     ],
   },
   {
     href: "#",
     label: "css",
     subMenu: [
+      { href: "css/css-background.html", label: "css-background" },
       { href: "css/css-marquee.html", label: "css-marquee" },
       { href: "css/robot-animation.html", label: "robot-animation" },
       { href: "css/simple-tips.html", label: "simple-tips" },
