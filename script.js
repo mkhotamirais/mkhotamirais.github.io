@@ -17,6 +17,7 @@ const navMenus = [
       { href: "css/css-marquee.html", label: "css-marquee" },
       { href: "css/robot-animation.html", label: "robot-animation" },
       { href: "css/simple-tips.html", label: "simple-tips" },
+      { href: "css/sticky", label: "sticky" },
     ],
   },
   {
