@@ -91,6 +91,9 @@ const navMenus = [
         subMenu2: [
           { href: "components/slider/slider1", label: "slider1" },
           { href: "components/slider/slider2", label: "slider2" },
+          { href: "components/slider/slider3", label: "slider3" },
+          { href: "components/slider/slider4", label: "slider4" },
+          { href: "components/slider/slider5", label: "slider5" },
         ],
       },
       { href: "components/modal", label: "modal" },
