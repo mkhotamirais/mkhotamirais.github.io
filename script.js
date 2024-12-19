@@ -141,7 +141,8 @@ ${navMenus
                 <div class="nav-item2">
                   <button type="button">
                     <span>${subMenu.label}</span>
-                    <i class="fa fa-chevron-right"></i>
+                    <i class="fa fa-chevron-right icon-desktop"></i>
+                    <i class="fa fa-chevron-down icon-mobile"></i>
                   </button>
                   <div class="sub-menu2">
                   ${subMenu.subMenu2
