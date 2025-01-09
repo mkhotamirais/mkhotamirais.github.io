@@ -3,8 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>accordion</title>
+    <title>acc1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .accordion {
+        border: 1px solid;
+        margin: 1rem;
+      }
+
+      .accordion .accordion-item button {
+        padding: 8px;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .accordion .accordion-item .accordion-content {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+      }
+
+      .accordion .accordion-item:hover .accordion-content {
+        height: calc-size(auto, size);
+      }
+
+      .accordion .accordion-item button .icon {
+        transition: all 0.5s ease;
+      }
+
+      .accordion .accordion-item:hover button .icon {
+        transform: rotate(180deg);
+      }
+
+      .accordion .accordion-item .accordion-content p {
+        padding: 8px;
+      }
+    </style>
   </head>
   <body>
     <h1>accordion</h1>
@@ -42,6 +84,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>

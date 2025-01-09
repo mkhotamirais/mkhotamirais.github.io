@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>sticky</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 200vh;
+      }
+
+      header {
+        padding: 2rem;
+      }
+
+      footer {
+        height: 100vh;
+      }
+
+      .title {
+        height: 3rem;
+        background-color: white;
+        border: 1px solid;
+        padding: 0 2rem;
+        position: sticky;
+      }
+
+      .content {
+        height: 200px;
+        padding: 2rem;
+        margin: 1rem;
+        border: 1px solid;
+      }
+
+      .sticky-0 {
+        top: 0;
+        z-index: 1;
+      }
+
+      .sticky-1,
+      .sticky-2,
+      .sticky-3 {
+        top: 3rem;
+      }
+
+      .sticky-flex {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .sticky-flex .aside-flex {
+        border: 1px solid;
+        position: sticky;
+        top: 3rem;
+        align-self: flex-start;
+        height: 20vh;
+      }
+
+      .sticky-flex .content-flex {
+        height: 50vh;
+        border: 1px solid;
+        width: 100%;
+      }
+
+      .sticky-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .sticky-grid .aside-grid {
+        border: 1px solid;
+        position: sticky;
+        top: 3rem;
+        height: 20vh;
+        align-self: flex-start;
+      }
+
+      .sticky-grid .content-grid {
+        height: 50vh;
+        border: 1px solid;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Sticky Header</header>
+
+    <div class="title sticky-0">sticky 0</div>
+    <div class="content">sticky 0 content</div>
+
+    <div>
+      <div class="title sticky-1">sticky-1</div>
+      <div class="content">sticky-1 content</div>
+    </div>
+
+    <div>
+      <div class="title sticky-2">sticky-2</div>
+      <div class="content">sticky-2 content</div>
+    </div>
+
+    <div>
+      <div class="title sticky-3">sticky-3</div>
+      <div class="content">sticky-3 content</div>
+    </div>
+
+    <div class="sticky-flex">
+      <div class="aside-flex">sticky-flex</div>
+      <div class="content-flex">content sticky flex</div>
+    </div>
+
+    <div class="sticky-grid">
+      <div class="aside-grid">sticky-grid</div>
+      <div class="content-grid">content sticky grid</div>
+    </div>
+
+    <footer>Sticky footer</footer>
+  </body>
+</html>

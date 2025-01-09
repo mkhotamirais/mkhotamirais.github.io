@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>mobile-navbar2</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        height: 4rem;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+      }
+
+      header #open-nav,
+      header nav #logo-mobile {
+        display: none;
+      }
+
+      @media (max-width: 400px) {
+        header #open-nav,
+        header nav #logo-mobile {
+          display: flex;
+        }
+        header nav {
+          position: fixed;
+          background-color: rgba(0, 0, 0, 0.3);
+          inset: 0;
+          transition: all 0.5s ease;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        header nav.active {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        header nav .nav-content {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background-color: white;
+          width: 70%;
+          transition: all 0.5s ease;
+          right: -100%;
+        }
+
+        header nav.active .nav-content {
+          right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" id="logo-desktop">Logo</a>
+      <button type="button" id="open-nav">open nav</button>
+      <nav>
+        <div class="nav-content">
+          <a href="#" id="logo-mobile">Logo</a>
+          <div class="menu">
+            <a href="#">menu1</a>
+            <a href="#">menu2</a>
+            <a href="#">menu3</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      const openNav = document.getElementById("open-nav");
+      const nav = document.querySelector("nav");
+      const navContent = document.querySelector(".nav-content");
+
+      openNav.addEventListener("click", () => {
+        nav.classList.add("active");
+      });
+
+      nav.addEventListener("click", () => {
+        nav.classList.remove("active");
+        navContent.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+      });
+
+      const navMenu = document.querySelectorAll("nav .menu a");
+      navMenu.forEach((n) =>
+        n.addEventListener("click", () => {
+          nav.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>

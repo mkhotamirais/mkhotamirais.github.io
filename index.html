@@ -3,77 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- seo -->
-    <meta name="description" content="tamiionweb github homepage with pure html, css and javascript" />
-    <meta name="keywords" content="m khotami tais, mkhotamirais, mkhotami, tamionweb, tamiweb html, tamiweb css" />
-    <meta name="author" content="Mkhotami Rais" />
+    <title>Basic Website</title>
 
-    <!-- css -->
-    <link rel="icon" type="image/x-icon" href="img/tamionweb24.svg" />
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/c463912954.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <title>mkhotamirais - tamiionweb github homepage with pure html, css and javascript</title>
+      body {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        background-color: #eeeeee;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        padding: 1rem;
+        border-bottom: 1rem solid #eeeeee;
+      }
+
+      #list {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+      }
+
+      #list a,
+      #list h3 {
+        width: fit-content;
+        text-transform: capitalize;
+      }
+
+      #list a span {
+        color: #333;
+      }
+    </style>
   </head>
+
   <body>
-    <!-- header -->
-    <header class="header">
-      <div class="container">
-        <div class="navbar">
-          <a href="/" class="logo logo-desktop">MKHOTAMI</a>
+    <header>
+      <h2>Catatan Web Dasar Mkhotami</h2>
 
-          <button type="button" title="nav bar" class="open-nav-btn">
-            <i class="fa fa-bars"></i>
-          </button>
-
-          <div class="nav-container">
-            <nav>
-              <a href="/" class="logo logo-mobile">MKHOTAMI</a>
-
-              <div class="nav-menu">
-                <!-- <div class="nav-item">
-                  <button type="button">
-                    <span>halo</span>
-                    <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <div class="sub-menu">
-                    <a href="#">halo</a>
-                  </div>
-                </div> -->
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
+      <input id="search" type="text" placeholder="search" />
     </header>
 
-    <!-- main -->
-    <main class="main">
-      <div class="container">
-        <div class="main-content">
-          <h1>Hello, I am Mkhotami, a web developer</h1>
-          <p>this website is made with pure html, css and javascript</p>
-        </div>
-        <div class="main-footer">
-          <a href="https://github.com/mkhotamirais" title="source code mkhotami"> <i class="fa fa-github"></i> </a>
-          <a href="https://tamionweb.my.id" title="tamionweb mkhotami">
-            <img src="img/tamionweb80.png" alt="" />
-          </a>
-        </div>
-      </div>
+    <main>
+      <div id="list"></div>
     </main>
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <small>&copy; mkhotami 2025</small>
-        </div>
-      </div>
-    </footer>
+    <!-- javascript -->
+    <script>
+      const navMenus = [
+        // html
+        { category: "html", label: "html-1", href: "html/html-1.html" },
+        { category: "html", label: "html-2", href: "html/html-2.html" },
+        { category: "html", label: "svg", href: "html/svg.html" },
+        { category: "html", label: "canvas", href: "html/canvas.html" },
+        // css
+        { category: "css", label: "css-background", href: "css/css-background.html" },
+        { category: "css", label: "css-marquee", href: "css/css-marquee.html" },
+        { category: "css", label: "robot-animation", href: "css/robot-animation.html" },
+        { category: "css", label: "simple-tips", href: "css/simple-tips.html" },
+        { category: "css", label: "sticky", href: "css/sticky.html" },
+        // js
+        { category: "js", label: "vue-jon", href: "js/vue-jon.html" },
+        { category: "js", label: "vue-traversy", href: "js/vue-traversy.html" },
+        { category: "js", label: "alpine-wpu", href: "js/alpine-wpu.html" },
+        // yt
+        { category: "yt", label: "wpu-mtrz1", href: "yt/wpu-mtrz1" },
+        { category: "yt", label: "wpu-bs1", href: "yt/wpu-bs1" },
+        { category: "yt", label: "wpu-bs2", href: "yt/wpu-bs2" },
+        { category: "yt", label: "27-11-24-nav", href: "yt/27-11-24-nav" },
+        { category: "yt", label: "06-04-20-portfolio", href: "yt/06-04-20-portfolio" },
+        { category: "yt", label: "01-01-21-tour-travel", href: "yt/01-01-21-tour-travel" },
+        { category: "yt", label: "01-11-24-halloween", href: "yt/01-11-24-halloween" },
+        { category: "yt", label: "04-01-21-online-education", href: "yt/04-01-21-online-education" },
+        // components
+        { category: "components", label: "acc1", href: "components/acc1.html" },
+        { category: "components", label: "acc2", href: "components/acc2.html" },
+        { category: "components", label: "acc3", href: "components/acc3.html" },
+        { category: "components", label: "acc4", href: "components/acc4.html" },
+        { category: "components", label: "nav1", href: "components/nav1.html" },
+        { category: "components", label: "nav2", href: "components/nav2.html" },
+        { category: "components", label: "nav3", href: "components/nav3.html" },
+        { category: "components", label: "nav4", href: "components/nav4.html" },
+        { category: "components", label: "slider1", href: "components/slider/slider1" },
+        { category: "components", label: "slider2", href: "components/slider/slider2" },
+        { category: "components", label: "slider3", href: "components/slider/slider3" },
+        { category: "components", label: "slider4", href: "components/slider/slider4" },
+        { category: "components", label: "slider5", href: "components/slider/slider5" },
+        { category: "components", label: "modal", href: "components/modal" },
+      ];
 
-    <!-- scripts -->
-    <script src="script.js"></script>
+      const search = document.querySelector("#search");
+      const list = document.querySelector("#list");
+
+      function render(menu) {
+        list.innerHTML = "";
+        if (menu.length === 0) {
+          const element = document.createElement("h3");
+          element.innerText = "Not Found";
+          list.appendChild(element);
+          return;
+        }
+        menu.forEach((nav) => {
+          let element;
+          element = document.createElement("a");
+          element.href = nav.href;
+          element.innerHTML = `(<span>${nav.category}</span>) ${nav.label}`;
+          list.appendChild(element);
+        });
+      }
+
+      const navMenusSort = navMenus.sort((a, b) => a.category.localeCompare(b.category));
+      render(navMenus);
+
+      search.addEventListener("input", (e) => {
+        const { value } = e.target;
+        const val = value.toLowerCase();
+        const filtered = navMenus.filter(
+          (nav) => nav.label.toLowerCase().includes(val) || nav.category.toLowerCase().includes(val)
+        );
+        render(filtered);
+      });
+    </script>
   </body>
 </html>

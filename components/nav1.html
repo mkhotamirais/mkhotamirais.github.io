@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>nav1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        height: 4rem;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+      }
+
+      header #open-nav,
+      header nav #close-nav {
+        display: none;
+      }
+
+      @media (max-width: 400px) {
+        header #open-nav,
+        header nav #close-nav {
+          display: block;
+        }
+
+        header nav {
+          position: fixed;
+          background-color: gray;
+          inset: 0;
+          transform: translateX(-100%);
+          transition: all 0.5s ease;
+        }
+
+        header nav.active {
+          transform: translateX(0);
+        }
+
+        header nav #close-nav {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
+
+        header nav .menu {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#">logo</a>
+      <button type="button" id="open-nav">open navbar</button>
+      <nav>
+        <button type="button" id="close-nav">close navbar</button>
+        <div class="menu">
+          <a href="#">menu1</a>
+          <a href="#">menu2</a>
+          <a href="#">menu3</a>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      const openNav = document.getElementById("open-nav");
+      const nav = document.querySelector("nav");
+      const closeNav = document.getElementById("close-nav");
+
+      openNav.addEventListener("click", () => {
+        nav.classList.add("active");
+      });
+
+      closeNav.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+
+      const navMenu = document.querySelectorAll("nav .menu a");
+      navMenu.forEach((n) =>
+        n.addEventListener("click", () => {
+          nav.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
